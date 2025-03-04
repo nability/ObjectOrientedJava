@@ -16,8 +16,16 @@ public class LuasBangun {
             BujurSangkar b1 = new BujurSangkar(sisi);
             b1.luasTotal();
         }
+        if (JenisBangunDatar==2){
+            System.out.println("Panjang :");
+            double panjang = sc.nextDouble();
+            System.out.println("Lebar :");
+            double lebar = sc.nextDouble();
+            PersegiPanjang b2 = new PersegiPanjang(panjang, lebar);
+            b2.luasTotal();
+        }
         else {
-            
+            System.out.println("Bangun Datar tidak diketahui");
         }
     }
 }
