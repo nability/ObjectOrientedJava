@@ -4,6 +4,7 @@ public class Segitiga extends BangunDatar {
         super("Segitiga", alas, tinggi);
     }
 
+    @Override
     public void setSegitiga (double alas, double tinggi){
         this.alas= alas;
         this.tinggi = tinggi;
