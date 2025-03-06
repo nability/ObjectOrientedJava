@@ -14,7 +14,7 @@ public class LuasBangun {
             System.out.println("Sisi :");
             double sisi = sc.nextDouble();
             BujurSangkar b1 = new BujurSangkar(sisi);
-            b1.luasTotal();
+            b1.infoBujurSangkar();
         }
         if (JenisBangunDatar==2){
             System.out.println("Panjang :");
@@ -22,10 +22,15 @@ public class LuasBangun {
             System.out.println("Lebar :");
             double lebar = sc.nextDouble();
             PersegiPanjang b2 = new PersegiPanjang(panjang, lebar);
-            b2.luasTotal();
+            b2.infoPersegiPanjang();
         }
-        else {
-            System.out.println("Bangun Datar tidak diketahui");
+        else if(JenisBangunDatar==3){
+            System.out.println("Alas :");
+            double alas = sc.nextDouble();
+            System.out.println("Tinggi :");
+            double tinggi = sc.nextDouble();
+            Segitiga b3 = new Segitiga(alas, tinggi);
+            b3.infoSegitiga();
         }
     }
 }

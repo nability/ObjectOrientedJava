@@ -14,7 +14,15 @@ public class BujurSangkar extends BangunDatar{
         return luas;
     }
 
-    public void luasTotal(){
-        System.out.println("Luas bujur sangkar :" + getLuasBujurSangkar());
+    public double getKelilingBujurSangkar(){
+        double keliling = 4 * sisi;
+        return keliling;
     }
+
+    public void infoBujurSangkar(){
+        System.out.println("Luas bujur sangkar :" + getLuasBujurSangkar());
+        System.out.println("Keliling bujur sangkar :" + getKelilingBujurSangkar());
+        System.out.println("==================");
+    }
+
 }

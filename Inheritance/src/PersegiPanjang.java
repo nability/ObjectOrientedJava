@@ -14,8 +14,15 @@ public class PersegiPanjang extends BangunDatar {
         double luas = panjang * lebar;
         return luas;
     }
-
-    public void luasTotal(){
-        System.out.println("Luas Persegi Panjang : " + getLuasPersegiPanjang());
+    public double getKelilingPersegiPanjang(){
+        double keliling = 2 * panjang + lebar;
+        return keliling;
     }
+
+    public void infoPersegiPanjang(){
+        System.out.println("Luas Persegi Panjang : " + getLuasPersegiPanjang());
+        System.out.println("Keliling Persegi Panjang : " + getKelilingPersegiPanjang());
+        System.out.println("==================");
+    }
+
 }
