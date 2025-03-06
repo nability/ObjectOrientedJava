@@ -16,10 +16,10 @@ public class tokped {
             System.out.println("Merk :");
             String name = sc.next();
             el.setName(name);
-            System.out.println("Masukan Harga :");
+            System.out.println("Enter price :");
             double price = sc.nextDouble();
             el.setPrice(price);
-            System.out.println("Garansi :");
+            System.out.println("Waranty :");
             String waranty = sc.next();
             el.setWaranty(waranty);
             el.infoProduct();
@@ -30,7 +30,7 @@ public class tokped {
             System.out.println("Merk :");
             String name = sc.next();
             cl.setName(name);
-            System.out.println("Masukan Harga :");
+            System.out.println("Enter price :");
             double price = sc.nextDouble();
             cl.setPrice(price);
             System.out.println("Size :");
@@ -44,7 +44,7 @@ public class tokped {
             System.out.println("Merk :");
             String name = sc.next();
             fd.setName(name);
-            System.out.println("Masukan Harga :");
+            System.out.println("Enter price :");
             double price = sc.nextDouble();
             fd.setPrice(price);
             System.out.println("Expired :");

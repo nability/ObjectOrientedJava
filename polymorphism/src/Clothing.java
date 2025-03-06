@@ -23,8 +23,4 @@ public class Clothing extends Product{
     public void setMaterial(String material) {
         this.material = material;
     }
-
-
-
-    
 }
