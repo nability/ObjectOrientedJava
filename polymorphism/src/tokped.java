@@ -36,6 +36,9 @@ public class tokped {
             System.out.println("Size :");
             int size = sc.nextInt();
             cl.setSize(size);
+            System.out.println("Material :");
+            String material = sc.next();
+            cl.setMaterial(material);
             cl.infoProduct();
         }
 
