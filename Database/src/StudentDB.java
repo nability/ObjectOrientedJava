@@ -56,7 +56,7 @@ public class StudentDB {
 
             if(gender != "L" && gender != "P"){
                 valid = false;
-                error += "Gender harus L/P";
+                error += "Gender harus L/P\n";
             }
             System.out.println(error);
             if(valid){
@@ -91,4 +91,74 @@ public class StudentDB {
             return true;
         }
     }
+
+    public void updateStudents(String nim, String name, String address, String gender) {
+        String sql = "UPDATE student SET name = ?, address = ?, gender = ? WHERE nim = ?";
+        try {
+            koneksi = getConnection("root", "");
+
+            if (!gender.equals("L") && !gender.equals("P")) {
+                System.out.println("Gender harus L/P");
+                return;
+            }
+
+            PreparedStatement ps = koneksi.prepareStatement(sql);
+            ps.setString(1, name);
+            ps.setString(2, address);
+            ps.setString(3, gender);
+            ps.setString(4, nim);
+
+            int result = ps.executeUpdate();
+            if (result > 0) {
+                System.out.println("Data berhasil diperbarui");
+            } else {
+                System.out.println("Data tidak ditemukan untuk NIM: " + nim);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (koneksi != null) {
+                    koneksi.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void deleteStudents(String nim) {
+        String sql = "DELETE FROM student WHERE nim = ?";
+        try {
+            koneksi = getConnection("root", "");
+
+            PreparedStatement ps = koneksi.prepareStatement(sql);
+            ps.setString(1, nim);
+
+            int result = ps.executeUpdate();
+            if (result > 0) {
+                System.out.println("Data berhasil dihapus");
+            } else {
+                System.out.println("Data tidak ditemukan untuk NIM: " + nim);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (koneksi != null) {
+                    koneksi.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void updateStudents(String nim, String name, String address, String gender) {
+        String sql = "UPDATE student SET name = ?", address = ?, gender = ?, WHERE nim =?";
+        try {
+        koneksi = getConnection("root","");
+        }
+    }
+
 }
